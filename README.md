@@ -142,8 +142,9 @@ if (FlvPlayer.isSupported()) {
         // Initialize http headers
         headers: {},
 
-        // The path of the video decoder, currently optional flvplayer-decoder-baseline.js and flvplayer-decoder-multiple.js
-        decoder: 'flvplayer-decoder-baseline.js',
+        // The path of the video decoder, currently optional flvplayer-decoder-baseline.js, flvplayer-decoder-multiple.js for H264 data
+        // flvplayer-decoder-screen-video.js - decoder for flash screen video
+        decoder: 'flvplayer-decoder-screen-video.js',
     });
 } else {
     console.warn('Your browser does not support Flvplayer.js');
@@ -315,19 +316,6 @@ Open web server
 ```bash
 $ npm start
 ```
-
-## Donations
-
-We accept donations through these channels:
-
-![pay](./images/pay.png)
-
--   [Patreon](https://www.patreon.com/artplayer)
--   [Paypal](https://www.paypal.me/harveyzack)
-
-## QQ Group
-
-![QQ Group](./images/qqgroup.png)
 
 ## License
 

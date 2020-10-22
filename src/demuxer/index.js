@@ -150,6 +150,13 @@ export default class Demuxer {
                     }
                     break;
                 }
+                case 'fsVideoData': {
+                    this.demuxRate(1);
+                    this.videoDataLength += 1;
+                    this.videoDataSize += message.data.byteLength;
+                    flv.emit('fsVideoData', message.data, message.timestamp);
+                    break;
+                }
                 case 'audioData':
                     this.audioDataLength += 1;
                     this.audioDataSize += message.data.byteLength;

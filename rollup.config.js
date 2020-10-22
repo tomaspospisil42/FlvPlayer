@@ -98,6 +98,14 @@ export default [
         plugins: [],
     },
     {
+        input: 'src/decoder/video/screenvideo/index.js',
+        output: {
+            name: 'FlvplayerDecoder',
+            file: isProd ? 'dist/flvplayer-decoder-screen-video.js' : 'docs/uncompiled/flvplayer-decoder-screen-video.js',
+        },
+        plugins: [],
+    },    
+    {
         input: 'src/control/index.js',
         output: {
             name: 'FlvplayerControl',
